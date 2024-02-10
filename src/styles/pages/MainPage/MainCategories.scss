@@ -1,0 +1,10 @@
+.main_categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+
+    & > *:not(:last-child) {
+        margin-right: 15px;
+    }
+}

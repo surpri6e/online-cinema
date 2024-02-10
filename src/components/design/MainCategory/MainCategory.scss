@@ -1,0 +1,25 @@
+@import '../../../styles/vars.scss';
+
+.main_category {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 60px;
+    border-radius: 6px;
+    padding: 20px;
+
+    cursor: pointer;
+    color: $grey;
+    background: linear-gradient(270deg, rgba(#FC84AF, 0.2), rgba(#A77DFF, 0.2));
+
+    transition: all 200ms linear;
+
+    &:hover {
+        padding: 30px;
+    }
+
+    img {
+        margin-right: 10px;
+    }
+}

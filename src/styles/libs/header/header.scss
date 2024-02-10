@@ -15,12 +15,25 @@
     & > *:not(:last-child) {
         margin-right: 40px;
     }
+
+    width: 80%;
+
+    &_is_searching {
+        width: 20%;
+    }
 }
 
 .header_right {
     display: flex;
-
+    align-items: center;
+    justify-content: end;
     & > *:not(:last-child) {
         margin-right: 20px;
+    }
+
+    width: 20%;
+
+    &_is_searching {
+        width: 80%;
     }
 }

@@ -1,16 +1,34 @@
-import React from 'react'
+import React, { FC } from 'react'
 import search from '../images/icons/search.svg';
 import profile from '../images/icons/profile.svg';
+import { Link, useLocation } from 'react-router-dom';
+import HeaderSearch from './HeaderSearch';
 
-const HeaderRight = () => {
+interface IHeaderRight {
+    isSearching: boolean;
+    setIsSearching: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const HeaderRight: FC<IHeaderRight> = ({isSearching, setIsSearching}) => {
+  const adress = useLocation()
+
   return (
     <>
-    <div className="_Ibg header_icons header_icons_search">
-        <img src={search} alt="search" />
-    </div>
-    <div className="_Ibg header_icons header_icons_profile">
+    {
+      '/registration' === adress.pathname
+      ?
+      <></>
+      :
+      <>
+        <div className="_Ibg header_icons header_icons_search" onClick={() => setIsSearching(true)}>
+            <img src={search} alt="search" />
+        </div>
+        {isSearching ? <HeaderSearch setIsSearching={setIsSearching}/> : <></>}
+      </>
+    }
+    <Link to={'/registration'} className="_Ibg header_icons header_icons_profile">
         <img src={profile} alt="profile" />
-    </div>
+    </Link>
     </>
   )
 }

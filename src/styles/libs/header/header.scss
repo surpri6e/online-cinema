@@ -1,0 +1,26 @@
+.header {
+    height: 100px;
+    
+    &_body {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        align-items: center;
+    }
+}
+
+.header_left {
+    display: flex;
+    align-items: center; 
+    & > *:not(:last-child) {
+        margin-right: 40px;
+    }
+}
+
+.header_right {
+    display: flex;
+
+    & > *:not(:last-child) {
+        margin-right: 20px;
+    }
+}

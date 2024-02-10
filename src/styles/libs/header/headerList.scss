@@ -1,0 +1,16 @@
+.header_list {
+    display: flex;
+
+    & > *:not(:last-child) {
+        margin-right: 50px;
+    }
+
+
+    &_link {
+        color: inherit;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

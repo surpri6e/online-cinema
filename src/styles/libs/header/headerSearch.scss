@@ -1,0 +1,10 @@
+.header_search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 1px solid $white;
+    border-right: 1px solid $white;
+    height: 30px;
+    padding: 0 10px;
+    width: 80%;
+}

@@ -1,4 +1,3 @@
-import React  from 'react'
 import '../styles/pages/MainPage/MainPage.scss'
 import MainCategories from '../components/MainCategories'
 import MainMovies from '../components/MainMovies'

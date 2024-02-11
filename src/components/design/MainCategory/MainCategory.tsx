@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { IMainCategory } from '../../../types/IMainCategory'
 import './MainCategory.scss'
 

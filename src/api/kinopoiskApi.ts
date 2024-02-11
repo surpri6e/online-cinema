@@ -20,8 +20,36 @@ export const kinopoisApi = createApi({
             transformResponse: (response: any): IFilmSmall[] => {
                 return response.items;
             },
+        }),
+        getMovies: builder.query({
+            query: () =>  {
+                return {
+                    url: `films/collections?type=TOP_POPULAR_MOVIES`,
+                    headers: {
+                        'X-API-KEY': config.X_API_KEY,
+                        'Content-Type': 'application/json',
+                    },
+                }
+            },
+            transformResponse: (response: any): IFilmSmall[] => {
+                return response.items;
+            },
+        }),
+        getSeries: builder.query({
+            query: () =>  {
+                return {
+                    url: `films/collections?type=TOP_250_TV_SHOWS`,
+                    headers: {
+                        'X-API-KEY': config.X_API_KEY,
+                        'Content-Type': 'application/json',
+                    },
+                }
+            },
+            transformResponse: (response: any): IFilmSmall[] => {
+                return response.items;
+            }
         })
     }),
 })
 
-export const { useGetCartoonsQuery } = kinopoisApi
+export const { useGetCartoonsQuery, useGetMoviesQuery, useGetSeriesQuery } = kinopoisApi

@@ -16,7 +16,7 @@ const MainSeries: FC<IMainBlock> = ({items, isLoading, error}) => {
           ?
           <Loader/>
           :
-          <MainSlider items={items}/>
+          <MainSlider items={items} nextElementClass='next_element_series'/>
         }
     </div>
   )

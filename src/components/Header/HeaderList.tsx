@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { MAIN_PAGE_PATH } from '../paths'
+import { MAIN_PAGE_PATH } from '../../paths'
 
 const HeaderList = () => {
   return (

@@ -1,6 +1,5 @@
 import { FC } from 'react'
-import './HeaderSearchedFilm.scss'
-import { IFilmSearched } from '../../../types/IFilmSearched'
+import { IFilmSearched } from '../../types/IFilmSearched'
 import { Link } from 'react-router-dom'
 import { DebouncedState } from 'use-debounce';
 

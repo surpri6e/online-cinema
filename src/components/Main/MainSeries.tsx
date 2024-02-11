@@ -1,7 +1,7 @@
 import { FC } from 'react'
-import MainSlider from './design/MainSlider/MainSlider'
-import Loader from './design/Loader/Loader'
-import { IMainBlock } from '../types/IMainBlock'
+import MainSlider from './MainSlider'
+import Loader from '../design/Loader/Loader'
+import { IMainBlock } from '../../types/IMainBlock'
 
 const MainSeries: FC<IMainBlock> = ({items, isLoading, error}) => {
   if(error) {

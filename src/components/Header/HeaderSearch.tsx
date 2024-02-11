@@ -1,9 +1,9 @@
 import React, { FC, useState } from 'react'
-import HeaderInput from './design/HeaderInput/HeaderInput'
-import cross from '../images/icons/cross.svg';
+import HeaderInput from './HeaderInput'
+import cross from '../../images/icons/cross.svg';
 import { useDebounce } from 'use-debounce';
-import { useGetFilmByKeywordsQuery } from '../api/kinopoiskApi';
-import HeaderSearchedFilm from './design/HeaderSearchedFilm/HeaderSearchedFilm';
+import { useGetFilmByKeywordsQuery } from '../../api/kinopoiskApi';
+import HeaderSearchedFilm from './HeaderSearchedFilm';
 
 interface IHeaderSearch {
     setIsSearching: React.Dispatch<React.SetStateAction<boolean>>;
@@ -11,9 +11,8 @@ interface IHeaderSearch {
 
 const HeaderSearch: FC<IHeaderSearch> = ({setIsSearching}) => {
   const [text, setText] = useState('');
-  const [textForSearchFilm, setTextForSearchedFilm] = useDebounce(text, 1500);
+  const [textForSearchFilm, setTextForSearchedFilm] = useDebounce(text, 400);
   const {data, isLoading} = useGetFilmByKeywordsQuery(textForSearchFilm, {skip: textForSearchFilm.length === 0});
-  console.log(isLoading ? '' : data)
 
   return (
     <div className='header_search'>
@@ -33,7 +32,7 @@ const HeaderSearch: FC<IHeaderSearch> = ({setIsSearching}) => {
             :
             data && data.length === 0
             ?
-            <div className='header_no-searched-film'>No films</div>
+            <div className='header_no-searched-films'>There is no movie with this title</div>
             :
             data && data.length <= 5
             ?

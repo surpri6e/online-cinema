@@ -1,9 +1,9 @@
-import instagram from '../images/icons/instagram.svg'
-import twitter from '../images/icons/twitter.svg'
-import facebook from '../images/icons/facebook.svg'
-import telegram from '../images/icons/telegram.svg'
+import instagram from '../../images/icons/instagram.svg'
+import twitter from '../../images/icons/twitter.svg'
+import facebook from '../../images/icons/facebook.svg'
+import telegram from '../../images/icons/telegram.svg'
 import { Link } from 'react-router-dom'
-import { MAIN_PAGE_PATH } from '../paths'
+import { MAIN_PAGE_PATH } from '../../paths'
 
 const Footer = () => {
   return (

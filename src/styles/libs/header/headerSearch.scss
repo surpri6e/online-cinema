@@ -1,3 +1,5 @@
+@import '../../vars.scss';
+
 .header_search {
     display: flex;
     align-items: center;
@@ -7,4 +9,22 @@
     height: 30px;
     padding: 0 10px;
     width: 80%;
+
+    position: relative;
+}
+
+.header_searched-films {
+    display: block;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.header_no-searched-film {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $bgc_main;
 }

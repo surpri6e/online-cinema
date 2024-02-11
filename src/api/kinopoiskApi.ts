@@ -1,6 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { config } from "../config";
 import { IFilmSmall } from "../types/IFilmSmall";
+import { IFilmSearched } from "../types/IFilmSearched";
 
 
 export const kinopoisApi = createApi({
@@ -48,8 +49,22 @@ export const kinopoisApi = createApi({
             transformResponse: (response: any): IFilmSmall[] => {
                 return response.items;
             }
+        }),
+        getFilmByKeywords: builder.query({
+            query: (keyword: string) =>  {
+                return {
+                    url: `films?keyword=${keyword}`,
+                    headers: {
+                        'X-API-KEY': config.X_API_KEY,
+                        'Content-Type': 'application/json',
+                    },
+                }
+            },
+            transformResponse: (response: any): IFilmSearched[] => {
+                return response.items;
+            }
         })
     }),
 })
 
-export const { useGetCartoonsQuery, useGetMoviesQuery, useGetSeriesQuery } = kinopoisApi
+export const { useGetCartoonsQuery, useGetMoviesQuery, useGetSeriesQuery, useGetFilmByKeywordsQuery } = kinopoisApi

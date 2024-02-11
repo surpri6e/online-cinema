@@ -21,9 +21,15 @@ const HeaderRight: FC<IHeaderRight> = ({isSearching, setIsSearching}) => {
       <></>
       :
       <>
-        <div className="_Ibg header_icons header_icons_search" onClick={() => setIsSearching(true)}>
+        {
+        !isSearching
+        ?
+          <div className="_Ibg header_icons header_icons_search" onClick={() => setIsSearching(true)}>
             <img src={search} alt="search" />
-        </div>
+          </div>
+        :
+          <></>
+        }
         {isSearching ? <HeaderSearch setIsSearching={setIsSearching}/> : <></>}
       </>
     }

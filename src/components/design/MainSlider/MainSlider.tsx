@@ -8,6 +8,8 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import { Navigation } from 'swiper/modules'
 
+import arrow from '../../../images/icons/arrow.png'
+
 interface IMainSlider {
   items: IFilmSmall[] | undefined;
   nextElementClass: string;
@@ -16,7 +18,6 @@ interface IMainSlider {
 const MainSlider: FC<IMainSlider> = ({items, nextElementClass}) => {
   return (
     <>
-    <button className={`${nextElementClass}`}>next</button>
     <Swiper
           modules={[Navigation]}
           navigation={{
@@ -27,6 +28,7 @@ const MainSlider: FC<IMainSlider> = ({items, nextElementClass}) => {
           spaceBetween={100}
           slidesPerView={6}
           allowTouchMove={false}
+          className='main_slider'
           // брэйк поинты!!
         >
         {
@@ -40,11 +42,12 @@ const MainSlider: FC<IMainSlider> = ({items, nextElementClass}) => {
             )
           })
         }
+        <div className={`${nextElementClass} next_element`}>
+          <img src={arrow} alt="next slide" />
+        </div>
     </Swiper>
     </>
   )
-
-  ////swiper-slide-next
 }
 
 export default MainSlider

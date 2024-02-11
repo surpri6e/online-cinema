@@ -1,3 +1,5 @@
+@import '../../../styles/vars.scss';
+
 .main_card {
     a {
         display: block;
@@ -9,4 +11,25 @@
         width: 200px;
         object-fit: cover;
     }
+}
+
+.main_slider {
+    position: relative;
+}
+
+.next_element {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    position: absolute;
+    right: 0;
+    top: calc(50% - 50px);
+    height: 50px;
+    width: 30px;
+    z-index: 100090;
+
+    cursor: pointer;
+    background-color: rgba($bgc_main, 0.8);
+    border-radius: 5px;
 }

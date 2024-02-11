@@ -4,6 +4,7 @@ import twitter from '../images/icons/twitter.svg'
 import facebook from '../images/icons/facebook.svg'
 import telegram from '../images/icons/telegram.svg'
 import { Link } from 'react-router-dom'
+import { MAIN_PAGE_PATH } from '../paths'
 
 const Footer = () => {
   return (
@@ -19,9 +20,9 @@ const Footer = () => {
           </ul>
 
           <ul className="footer_help">
-            <li><Link to='#'>Home</Link></li>
-            <li><Link to='#'>Support</Link></li>
-            <li><Link to='#'>Account</Link></li>
+            <li><Link to={MAIN_PAGE_PATH}>Home</Link></li>
+            <li><Link to={MAIN_PAGE_PATH}>Support</Link></li>
+            <li><Link to={MAIN_PAGE_PATH}>Account</Link></li>
           </ul>
 
           <h3 className="footer_logo logo">PlayOn</h3>

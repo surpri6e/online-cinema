@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import HeaderList from './HeaderList'
 import HeaderRight from './HeaderRight'
 import { Link, useLocation } from 'react-router-dom'
+import { MAIN_PAGE_PATH, REGISTRATION_PAGE_PATH } from '../paths'
 
 const Header = () => {
   const [isSearching, setIsSearching] = useState(false)
@@ -13,9 +14,9 @@ const Header = () => {
         <div className="header_body">
 
           <div className={`header_left ${isSearching ? 'header_left_is_searching' : ''}`}>
-            <Link to={''} className='logo'>PlayOn</Link>
+            <Link to={MAIN_PAGE_PATH} className='logo'>PlayOn</Link>
             {
-              '/registration' === adress.pathname
+              REGISTRATION_PAGE_PATH === adress.pathname
               ?
               <></>
               :

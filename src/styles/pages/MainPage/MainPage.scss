@@ -6,8 +6,9 @@
     & > *:not(:last-child) {
         margin-bottom: 80px;
     }
-}
 
-// .main_block {
-//     height: 380px;
-// }
+    // reuse this class 
+    .main_categories {
+        margin-bottom: 20px;
+    }
+}

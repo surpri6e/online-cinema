@@ -1,0 +1,16 @@
+@import '../../../styles/vars.scss';
+
+.header_searched-film {
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: $bgc_main;
+
+    transition: all 150ms linear;
+
+    &:hover {
+        background-color: lighten($bgc_main, 20);
+    }
+}

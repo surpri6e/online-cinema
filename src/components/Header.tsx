@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import HeaderList from './HeaderList'
 import HeaderRight from './HeaderRight'
 import { Link, useLocation } from 'react-router-dom'

@@ -1,4 +1,3 @@
-import React from 'react'
 import './HeaderInput.scss'
 
 const HeaderInput = () => {

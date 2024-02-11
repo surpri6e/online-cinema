@@ -1,4 +1,3 @@
-import React from 'react'
 import './styles/styles.scss'
 import Header from './components/Header'
 import { BrowserRouter } from 'react-router-dom'

@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import MainSlider from './design/MainSlider/MainSlider'
 import Loader from './design/Loader/Loader'
 import { IMainBlock } from '../types/IMainBlock'

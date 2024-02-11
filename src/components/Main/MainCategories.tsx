@@ -1,6 +1,6 @@
-import MainCategory from './design/MainCategory/MainCategory';
-import '../styles/pages/MainPage/MainCategories.scss';
-import { mainCategories } from '../utils/mainCategories';
+import MainCategory from './MainCategory';
+import '../../styles/pages/MainPage/MainCategories.scss';
+import { mainCategories } from '../../utils/mainCategories';
 
 
 const MainCategories = () => {

@@ -1,8 +1,8 @@
 import './styles/styles.scss'
-import Header from './components/Header'
+import Header from './components/Header/Header'
 import { BrowserRouter } from 'react-router-dom'
 import RoutesList from './components/RoutesList'
-import Footer from './components/Footer'
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (

@@ -1,14 +1,12 @@
 import { FC } from 'react'
 import { Link } from 'react-router-dom'
-import { IFilmSmall } from '../../../types/IFilmSmall'
+import { IFilmSmall } from '../../types/IFilmSmall'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import './MainSlider.scss'
-import 'swiper/css'
-
-import 'swiper/css/navigation'
 import { Navigation } from 'swiper/modules'
-
-import arrow from '../../../images/icons/arrow.png'
+import '../../styles/pages/MainPage/MainSlider.scss'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import arrow from '../../images/icons/arrow.png'
 
 interface IMainSlider {
   items: IFilmSmall[] | undefined;
@@ -25,11 +23,28 @@ const MainSlider: FC<IMainSlider> = ({items, nextElementClass}) => {
           }}
 
           loop={true}
-          spaceBetween={100}
-          slidesPerView={6}
+          slidesPerView={1}
           allowTouchMove={false}
           className='main_slider'
-          // брэйк поинты!!
+
+          breakpoints={{
+            1400: {
+              slidesPerView: 6
+            },
+            1200: {
+              slidesPerView: 5
+            },
+            1000: {
+              slidesPerView: 4
+            },
+            700: {
+              slidesPerView: 3
+            },
+            550: {
+              slidesPerView: 2
+            }
+          }}
+
         >
         {
           items?.map((slide) => {

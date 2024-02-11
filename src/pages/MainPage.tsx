@@ -1,8 +1,8 @@
 import '../styles/pages/MainPage/MainPage.scss'
-import MainCategories from '../components/MainCategories'
-import MainMovies from '../components/MainMovies'
-import MainCartoons from '../components/MainCartoons'
-import MainSeries from '../components/MainSeries'
+import MainCategories from '../components/Main/MainCategories'
+import MainMovies from '../components/Main/MainMovies'
+import MainCartoons from '../components/Main/MainCartoons'
+import MainSeries from '../components/Main/MainSeries'
 import { useGetCartoonsQuery, useGetMoviesQuery, useGetSeriesQuery } from '../api/kinopoiskApi'
 import { randomFilms } from '../utils/randomFilms'
 

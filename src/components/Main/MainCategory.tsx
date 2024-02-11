@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import { IMainCategory } from '../../../types/IMainCategory'
-import './MainCategory.scss'
+import { IMainCategory } from '../../types/IMainCategory'
+import '../../styles/pages/MainPage/MainCategory.scss'
 
 const MainCategory: FC<IMainCategory> = ({path, title}) => {
   return (

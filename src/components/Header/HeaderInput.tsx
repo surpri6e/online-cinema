@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import './HeaderInput.scss'
 
 interface IHeaderInput {
   setText: React.Dispatch<React.SetStateAction<string>>

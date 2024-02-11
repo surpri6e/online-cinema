@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import search from '../images/icons/search.svg';
+import search from '../images/icons/search.png';
 import profile from '../images/icons/profile.svg';
 import { Link, useLocation } from 'react-router-dom';
 import HeaderSearch from './HeaderSearch';

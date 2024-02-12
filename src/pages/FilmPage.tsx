@@ -1,10 +1,11 @@
 import { useParams } from 'react-router-dom'
+import { FILM_PLAYER_LINK } from '../constants'
 
 const FilmPage = () => {
     const { idFilm } = useParams()
-    console.log(idFilm)
+
   return (
-    <a href={`https://123123.svetacdn.in/IAF0wWTdNYZm?kp_id=${idFilm}`} target='_blank'>here</a>
+    <a href={`${FILM_PLAYER_LINK}${idFilm}`} target='_blank'>here</a>
   )
 }
 

@@ -1,3 +1,5 @@
+@import '../../vars.scss';
+
 .main_categories {
     display: flex;
     justify-content: center;
@@ -5,5 +7,13 @@
 
     & > *:not(:last-child) {
         margin-right: 15px;
+    }
+}
+
+@media screen and (max-width: $bp510) {
+    .main_categories {
+        & > *:not(:last-child) {
+            margin-right: 0px;
+        }
     }
 }

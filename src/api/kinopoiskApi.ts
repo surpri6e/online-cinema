@@ -2,11 +2,12 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { config } from "../config";
 import { IFilmSmall } from "../types/IFilmSmall";
 import { IFilmSearched } from "../types/IFilmSearched";
+import { KINOPOISK_API_LINK } from "../constants";
 
 
 export const kinopoisApi = createApi({
     reducerPath: 'kinopoiskApi',
-    baseQuery: fetchBaseQuery({baseUrl: 'https://kinopoiskapiunofficial.tech/api/v2.2/'}),
+    baseQuery: fetchBaseQuery({baseUrl: KINOPOISK_API_LINK}),
     endpoints: (builder) => ({
         getCartoons: builder.query({
             query: () =>  {

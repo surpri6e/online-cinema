@@ -24,3 +24,9 @@
         margin-right: 10px;
     }
 }
+
+@media screen and (max-width: $bp510) { 
+    .main_category {
+        width: 80%;
+    }
+  }

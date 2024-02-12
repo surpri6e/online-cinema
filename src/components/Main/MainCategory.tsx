@@ -1,13 +1,15 @@
 import { FC } from 'react'
 import { IMainCategory } from '../../types/IMainCategory'
 import '../../styles/pages/MainPage/MainCategory.scss'
+import { Link } from 'react-router-dom'
 
-const MainCategory: FC<IMainCategory> = ({path, title}) => {
+
+const MainCategory: FC<IMainCategory> = ({path, title, to}) => {
   return (
-    <div className='main_category'>
+    <Link to={to} className='main_category'>
         <img src={path} alt={title} />
         {title}
-    </div>
+    </Link>
   )
 }
 

@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { IMainBlock } from '../../types/IMainBlock'
 import Loader from '../design/Loader/Loader'
-import MainSlider from './MainSlider'
+import Slider from '../Slider'
 
 const MainCartoons: FC<IMainBlock> = ({items, isLoading, error}) => {
   if(error) {
@@ -16,7 +16,7 @@ const MainCartoons: FC<IMainBlock> = ({items, isLoading, error}) => {
           ?
           <Loader/>
           :
-          <MainSlider items={items} nextElementClass='next_element_cartoons'/>
+          <Slider items={items} nextElementClass='next_element_cartoons'/>
         }
     </div>
   )

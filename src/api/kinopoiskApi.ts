@@ -3,6 +3,7 @@ import { config } from "../config";
 import { IFilmSmall } from "../types/IFilmSmall";
 import { IFilmSearched } from "../types/IFilmSearched";
 import { KINOPOISK_API_LINK } from "../constants";
+import { IFilm } from "../types/IFilm";
 
 
 export const kinopoisApi = createApi({
@@ -64,8 +65,19 @@ export const kinopoisApi = createApi({
             transformResponse: (response: any): IFilmSearched[] => {
                 return response.items;
             }
+        }),
+        getFilmById: builder.query<IFilm, string>({
+            query: (id: string) =>  {
+                return {
+                    url: `films/${id}`,
+                    headers: {
+                        'X-API-KEY': config.X_API_KEY,
+                        'Content-Type': 'application/json',
+                    },
+                }
+            },
         })
     }),
 })
 
-export const { useGetCartoonsQuery, useGetMoviesQuery, useGetSeriesQuery, useGetFilmByKeywordsQuery } = kinopoisApi
+export const { useGetCartoonsQuery, useGetMoviesQuery, useGetSeriesQuery, useGetFilmByKeywordsQuery, useGetFilmByIdQuery } = kinopoisApi

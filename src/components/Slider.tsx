@@ -1,19 +1,19 @@
 import { FC } from 'react'
 import { Link } from 'react-router-dom'
-import { IFilmSmall } from '../../types/IFilmSmall'
+import { IFilmSmall } from '../types/IFilmSmall'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
-import '../../styles/pages/MainPage/MainSlider.scss'
+import '../styles/components/Slider.scss'
 import 'swiper/css'
 import 'swiper/css/navigation'
-import arrow from '../../images/icons/arrow.png'
+import arrow from '../images/icons/arrow.png'
 
-interface IMainSlider {
+interface ISlider {
   items: IFilmSmall[] | undefined;
   nextElementClass: string;
 }
 
-const MainSlider: FC<IMainSlider> = ({items, nextElementClass}) => {
+const Slider: FC<ISlider> = ({items, nextElementClass}) => {
   return (
     <>
     <Swiper
@@ -65,4 +65,4 @@ const MainSlider: FC<IMainSlider> = ({items, nextElementClass}) => {
   )
 }
 
-export default MainSlider
+export default Slider

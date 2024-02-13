@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import MainSlider from './MainSlider'
+import Slider from '../Slider'
 import Loader from '../design/Loader/Loader'
 import { IMainBlock } from '../../types/IMainBlock'
 
@@ -16,7 +16,7 @@ const MainSeries: FC<IMainBlock> = ({items, isLoading, error}) => {
           ?
           <Loader/>
           :
-          <MainSlider items={items} nextElementClass='next_element_series'/>
+          <Slider items={items} nextElementClass='next_element_series'/>
         }
     </div>
   )

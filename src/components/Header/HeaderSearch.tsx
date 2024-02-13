@@ -1,17 +1,17 @@
-import React, { FC, useState } from 'react'
+import { useContext, useState } from 'react'
 import HeaderInput from './HeaderInput'
 import cross from '../../images/icons/cross.svg';
 import { useDebounce } from 'use-debounce';
 import { useGetFilmByKeywordsQuery } from '../../api/kinopoiskApi';
 import HeaderSearchedFilm from './HeaderSearchedFilm';
+import { IsSearchingContext } from '../../context/isSearchingContext';
 
-interface IHeaderSearch {
-    setIsSearching: React.Dispatch<React.SetStateAction<boolean>>;
-}
+const HeaderSearch = () => {
+  const {setIsSearching} = useContext(IsSearchingContext);
 
-const HeaderSearch: FC<IHeaderSearch> = ({setIsSearching}) => {
   const [text, setText] = useState('');
   const [textForSearchFilm, setTextForSearchedFilm] = useDebounce(text, 400);
+
   const {data, isLoading} = useGetFilmByKeywordsQuery(textForSearchFilm, {skip: textForSearchFilm.length === 0});
 
   return (
@@ -34,11 +34,11 @@ const HeaderSearch: FC<IHeaderSearch> = ({setIsSearching}) => {
             ?
             <div className='header_no-searched-films'>There is no movie with this title</div>
             :
-            data && data.length <= 5
-            ?
-            data && data.map((film) => <HeaderSearchedFilm key={film.kinopoiskId} info={film} setIsSearching={setIsSearching} setText={setText} setTextForSearchedFilm={setTextForSearchedFilm} />)
-            :
-            data && data.slice(0, 5).map((film) => <HeaderSearchedFilm key={film.kinopoiskId} info={film} setIsSearching={setIsSearching} setText={setText} setTextForSearchedFilm={setTextForSearchedFilm} />)
+            // data && data.length <= 5
+            // ?
+            data && data.map((film) => <HeaderSearchedFilm key={film.kinopoiskId} info={film} setText={setText} setTextForSearchedFilm={setTextForSearchedFilm} />)
+            // :
+            // data && data.slice(0, 5).map((film) => <HeaderSearchedFilm key={film.kinopoiskId} info={film} setText={setText} setTextForSearchedFilm={setTextForSearchedFilm} />)
           }
         </div>
     </div>

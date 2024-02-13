@@ -34,11 +34,7 @@ const HeaderSearch = () => {
             ?
             <div className='header_no-searched-films'>There is no movie with this title</div>
             :
-            // data && data.length <= 5
-            // ?
             data && data.map((film) => <HeaderSearchedFilm key={film.kinopoiskId} info={film} setText={setText} setTextForSearchedFilm={setTextForSearchedFilm} />)
-            // :
-            // data && data.slice(0, 5).map((film) => <HeaderSearchedFilm key={film.kinopoiskId} info={film} setText={setText} setTextForSearchedFilm={setTextForSearchedFilm} />)
           }
         </div>
     </div>

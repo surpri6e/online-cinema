@@ -12,8 +12,8 @@
 
 @media screen and (max-width: $bp510) {
     .main_categories {
-        & > *:not(:last-child) {
-            margin-right: 0px;
+        & > *:nth-child(even) {
+            margin-right: 10px;
         }
     }
 }

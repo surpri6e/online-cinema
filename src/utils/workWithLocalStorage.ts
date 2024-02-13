@@ -4,7 +4,7 @@ export function addOftenSearchedFilm(info: IFilmSmall) {
     localStorage.setItem(info.kinopoiskId.toString(), info.posterUrlPreview);
 }
 
-export function getOftenSearchedFilms() {
+export function getOftenSearchedFilms(): IFilmSmall[] {
     let keys = Object.keys(localStorage);
     let values = Object.values(localStorage);
     if(localStorage.length > 5) {
@@ -24,5 +24,5 @@ export function getOftenSearchedFilms() {
         }
     }
 
-    return result;
+    return result as IFilmSmall[];
 }

@@ -7,6 +7,7 @@ import '../styles/components/Slider.scss'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import arrow from '../images/icons/arrow.png'
+import { breakpointsForSlider } from '../utils/breakpointsForSlider'
 
 interface ISlider {
   items: IFilmSmall[] | undefined;
@@ -27,23 +28,7 @@ const Slider: FC<ISlider> = ({items, nextElementClass}) => {
           allowTouchMove={false}
           className='main_slider'
 
-          breakpoints={{
-            1400: {
-              slidesPerView: 6
-            },
-            1200: {
-              slidesPerView: 5
-            },
-            1000: {
-              slidesPerView: 4
-            },
-            700: {
-              slidesPerView: 3
-            },
-            550: {
-              slidesPerView: 2
-            }
-          }}
+          breakpoints={breakpointsForSlider}
 
         >
         {

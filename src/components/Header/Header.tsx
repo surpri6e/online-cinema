@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import HeaderList from './HeaderList'
 import HeaderRight from './HeaderRight'
 import { Link, useLocation } from 'react-router-dom'
@@ -10,7 +10,7 @@ const Header = () => {
   const {isSearching} = useContext(IsSearchingContext);
   const adress = useLocation()
 
-  // const films = getOftenSearchedFilms()
+  const [oftenSearchedFilms] = useState(getOftenSearchedFilms())
 
   return (
     <>

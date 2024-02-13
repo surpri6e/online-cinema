@@ -9,18 +9,18 @@ const FilmPage = () => {
     const { idFilm } = useParams()
     const {data, error, isLoading} = useGetFilmByIdQuery(idFilm ? idFilm : '', {skip: idFilm === undefined});
 
+    useEffect(() => {
+      if(data) {
+        addOftenSearchedFilm({kinopoiskId: data.kinopoiskId, posterUrlPreview: data.posterUrlPreview})
+      }
+    }, [data])
+
     if(isLoading) {
       return <Loader/>
     }
     if(error) {
       return <></> //IMPOSSIBLE
     }
-    
-    // useEffect(() => {
-    //   if(data) {
-    //     addOftenSearchedFilm({kinopoiskId: data.kinopoiskId, posterUrlPreview: data.posterUrlPreview})
-    //   }
-    // }, [data])
 
   return (
     <>

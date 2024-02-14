@@ -5,6 +5,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { MAIN_PAGE_PATH, REGISTRATION_PAGE_PATH } from '../../paths'
 import { IsSearchingContext } from '../../context/isSearchingContext'
 import { getOftenSearchedFilms } from '../../utils/workWithLocalStorage'
+import HeaderOftenSearched from './HeaderOftenSearched'
 
 const Header = () => {
   const {isSearching} = useContext(IsSearchingContext);
@@ -32,9 +33,7 @@ const Header = () => {
         </div>
       </div>
     </header>
-    {/* {
-      films.map((link) => <img src={link.posterUrlPreview ? link.posterUrlPreview : ''} key={link.posterUrlPreview}/>)
-    } */}
+    {isSearching ? <HeaderOftenSearched items={oftenSearchedFilms}/> : <></>}
     </>
   )
 }

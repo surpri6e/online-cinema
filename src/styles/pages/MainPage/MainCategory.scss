@@ -28,5 +28,8 @@
 @media screen and (max-width: $bp510) { 
     .main_category {
         width: 45%;
+        &:hover {
+            padding: 20px;
+        }
     }
   }

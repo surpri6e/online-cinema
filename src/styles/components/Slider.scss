@@ -3,12 +3,20 @@
 .main_card {
     a {
         display: block;
+        height: 300px;
+        width: 200px;
     }
+
     img {
         border-radius: 12px;
         height: 300px;
         width: 200px;
         object-fit: cover;
+
+        transition: all 150ms linear;
+        &:hover {
+            opacity: 0.5;
+        }
     }
 }
 
@@ -29,7 +37,7 @@
     z-index: 100090;
 
     cursor: pointer;
-    background-color: rgba(black, 0.6);
-    border: 1px solid rgba(white, 0.3);
+    background-color: rgba($grey, 0.6);
+    border: 1px solid rgba(white, 0.8);
     border-radius: 5px;
 }

@@ -27,6 +27,7 @@ const Slider: FC<ISlider> = ({items, nextElementClass}) => {
           slidesPerView={1}
           allowTouchMove={false}
           className='main_slider'
+          spaceBetween={20}
 
           breakpoints={breakpointsForSlider}
 

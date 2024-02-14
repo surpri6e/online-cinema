@@ -11,7 +11,7 @@ export const breakpointsForSlider = {
     700: {
       slidesPerView: 3
     },
-    550: {
+    500: {
       slidesPerView: 2
     }
 }

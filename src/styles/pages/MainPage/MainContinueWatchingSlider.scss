@@ -1,0 +1,67 @@
+@import '../../vars.scss';
+
+.continue-watching_card {
+    a {
+        display: block;
+        height: 200px;
+        width: 380px;
+    }
+
+    img {
+        border-radius: 12px;
+        height: 200px;
+        width: 380px;
+        object-fit: cover;
+    }
+    position: relative;
+}
+
+.continue-watching_arrow {
+    position: absolute;
+    left: calc(50% - 26px);
+    top: calc(100px - 26px);
+
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+
+    background-color: rgba($grey, 0.6);
+    border: 1px solid rgba(white, 0.8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 150ms linear;
+    opacity: 1;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+
+    img {
+        height: 22px;
+        width: 22px;
+    }
+}
+
+@media screen and (max-width: $bp510) { 
+    .continue-watching_card {
+        img {
+            height: 120px;
+            width: 175px;
+        }
+    }
+    .continue-watching_arrow {
+        left: calc(50% - 16px);
+        top: calc(60px - 16px);
+
+        width: 32px;
+        height: 32px;
+
+        img {
+            height: 22px;
+            width: 22px;
+        }
+    }
+  }

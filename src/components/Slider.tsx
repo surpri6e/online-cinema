@@ -26,7 +26,7 @@ const Slider: FC<ISlider> = ({items, nextElementClass}) => {
           loop={true}
           slidesPerView={1}
           allowTouchMove={false}
-          className='main_slider'
+          className='slider'
           spaceBetween={20}
 
           breakpoints={breakpointsForSlider}
@@ -36,7 +36,7 @@ const Slider: FC<ISlider> = ({items, nextElementClass}) => {
           items?.map((slide) => {
             return ( 
               <SwiperSlide key={slide.kinopoiskId}>
-                  <Link to={`/film/${slide.kinopoiskId}`} className='main_card'>
+                  <Link to={`/film/${slide.kinopoiskId}`} className='slider_card'>
                     <img src={slide.posterUrlPreview} alt={`${slide.kinopoiskId}`} />
                   </Link>
               </SwiperSlide>

@@ -1,0 +1,50 @@
+.header_often-searched {
+    padding: 60px 0 ;
+}
+
+._Container--header_often-searched {
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    max-width: 1135px;
+}
+
+
+.often-searched_title {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.header_often-searhed_body {
+    display: flex;
+}
+
+.often-searched_left {
+    width: 50%;
+}
+.often-searched_right {
+    width: 50%;
+}
+
+.often-searched_images {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > * {
+        margin: 15px 0;
+        margin-right: 50px;
+    }
+}
+
+.often-searched_image {
+    img {
+        height: 110px;
+        width: 75px;
+        border-radius: 3px;
+
+        transition: all 150ms linear;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}

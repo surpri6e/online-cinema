@@ -1,6 +1,6 @@
 @import '../vars.scss';
 
-.main_card {
+.slider_card {
     a {
         display: block;
         height: 300px;
@@ -11,7 +11,7 @@
         border-radius: 12px;
         height: 300px;
         width: 200px;
-        object-fit: cover;
+        object-fit: contain;
 
         transition: all 150ms linear;
         &:hover {
@@ -20,7 +20,7 @@
     }
 }
 
-.main_slider {
+.slider {
     position: relative;
 }
 
@@ -40,4 +40,12 @@
     background-color: rgba($grey, 0.6);
     border: 1px solid rgba(white, 0.8);
     border-radius: 5px;
+}
+
+@media screen and (max-width: $bp510) {
+    .slider_card {
+        img {
+            width: 175px;
+        }
+    }
 }

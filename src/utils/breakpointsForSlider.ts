@@ -15,3 +15,15 @@ export const breakpointsForSlider = {
       slidesPerView: 2
     }
 }
+
+export const breakpointsForMainContinueWatchingSlider = {
+  1300: {
+    slidesPerView: 3.3
+  },
+  880: {
+    slidesPerView: 2
+  },
+  600: {
+    slidesPerView: 1.3
+  }
+}

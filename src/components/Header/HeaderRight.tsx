@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import search from '../../images/icons/search.png';
 import profile from '../../images/icons/profile.svg';
 import { Link, useLocation } from 'react-router-dom';
@@ -8,6 +8,7 @@ import { IsSearchingContext } from '../../context/isSearchingContext';
 
 const HeaderRight = () => {
   const {isSearching, setIsSearching} = useContext(IsSearchingContext);
+  const [text, setText] = useState('');
   const adress = useLocation()
 
   return (
@@ -18,10 +19,15 @@ const HeaderRight = () => {
         <></>
         :
         <>
-          <div className="_Ibg header_icons header_icons_search" onClick={() => setIsSearching(true)}>
+          <div className="_Ibg header_icons header_icons_search" onClick={() => {
+            if(isSearching) {
+              console.log('do from notion')
+            }
+            setIsSearching(true)
+          }}>
             <img src={search} alt="search" />
           </div>
-          {isSearching ? <HeaderSearch/> : <></>}
+          {isSearching ? <HeaderSearch text={text} setText={setText}/> : <></>}
         </>
       }
       <Link to={REGISTRATION_PAGE_PATH} className="_Ibg header_icons header_icons_profile">

@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { FC, useContext } from 'react'
 import HeaderInput from './HeaderInput'
 import cross from '../../images/icons/cross.svg';
 import { useDebounce } from 'use-debounce';
@@ -6,10 +6,14 @@ import { useGetFilmByKeywordsQuery } from '../../api/kinopoiskApi';
 import HeaderSearchedFilm from './HeaderSearchedFilm';
 import { IsSearchingContext } from '../../context/isSearchingContext';
 
-const HeaderSearch = () => {
+interface IHeaderSearch {
+  text: string;
+  setText: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const HeaderSearch: FC<IHeaderSearch> = ({text, setText}) => {
   const {setIsSearching} = useContext(IsSearchingContext);
 
-  const [text, setText] = useState('');
   const [textForSearchFilm, setTextForSearchedFilm] = useDebounce(text, 400);
 
   const {data, isLoading} = useGetFilmByKeywordsQuery(textForSearchFilm, {skip: textForSearchFilm.length === 0});
@@ -17,7 +21,7 @@ const HeaderSearch = () => {
   return (
     <div className='header_search'>
         <HeaderInput setText={setText}/>
-        <div className="_Ibg header_icons header_icons_search" onClick={() => {
+        <div className="_Ibg header_icons header_icons_cross" onClick={() => {
           setIsSearching(false)
           setText('')
           setTextForSearchedFilm('')

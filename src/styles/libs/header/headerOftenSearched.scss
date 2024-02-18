@@ -48,3 +48,39 @@
         }
     }
 }
+
+@media screen and (max-width: 1050px) {
+    .header_often-searched {
+        padding: 30px 0 ;
+    }
+    .header_often-searhed_body {
+        flex-direction: column;
+    }
+    .often-searched_left {
+        width: 100%;
+    }
+    .often-searched_images {
+        justify-content: center;
+        & > * {
+            margin: 15px 22px;
+        }
+    }
+    .often-searched_right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: $bp510) {
+    .often-searched_right {
+        display: none;
+    }
+    .often-searched_images {
+        justify-content: center;
+        & > * {
+            margin: 8px 5px;
+        }
+    }
+}

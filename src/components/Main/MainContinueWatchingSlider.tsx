@@ -26,7 +26,6 @@ const MainContinueWatchingSlider: FC<IMainContinueWatchingSlider> = ({items, nex
           slidesPerView={1}
           allowTouchMove={false}
           className='slider'
-          spaceBetween={20}
 
           breakpoints={breakpointsForMainContinueWatchingSlider}
 
@@ -39,7 +38,7 @@ const MainContinueWatchingSlider: FC<IMainContinueWatchingSlider> = ({items, nex
                     <div className='continue-watching_arrow'>
                       <img src={continue_watching} alt="continue"/>
                     </div>
-                    <img src={slide.imageUrl} alt={`${slide.kinopoiskId}`} />
+                    <img src={slide.imageUrl} alt={`${slide.kinopoiskId}`} className='continue-watching_image'/>
                   </Link>
               </SwiperSlide>
             )

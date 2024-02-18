@@ -1,17 +1,14 @@
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import HeaderList from './HeaderList'
 import HeaderRight from './HeaderRight'
 import { Link, useLocation } from 'react-router-dom'
 import { MAIN_PAGE_PATH, REGISTRATION_PAGE_PATH } from '../../paths'
 import { IsSearchingContext } from '../../context/isSearchingContext'
-import { getOftenSearchedFilms } from '../../utils/workWithLocalStorage'
 import HeaderOftenSearched from './HeaderOftenSearched'
 
 const Header = () => {
   const {isSearching} = useContext(IsSearchingContext);
   const adress = useLocation()
-
-  const [oftenSearchedFilms] = useState(getOftenSearchedFilms())
 
   return (
     <>
@@ -33,7 +30,7 @@ const Header = () => {
         </div>
       </div>
     </header>
-    {isSearching ? <HeaderOftenSearched items={oftenSearchedFilms}/> : <></>}
+    {isSearching ? <HeaderOftenSearched/> : <></>}
     </>
   )
 }

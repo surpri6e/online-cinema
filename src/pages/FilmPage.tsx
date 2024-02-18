@@ -15,7 +15,7 @@ const FilmPage = () => {
         addOftenSearchedFilm({kinopoiskId: data.kinopoiskId, posterUrlPreview: data.posterUrlPreview})
       }
       if(data && dataFrames && dataFrames.length > 0) {
-        addContinueWatchingFilm({imageUrl: dataFrames[0].imageUrl, kinopoiskId: data.kinopoiskId})
+        addContinueWatchingFilm({imageUrl: dataFrames[0].imageUrl, kinopoiskId: data.kinopoiskId}) // press on button
       }
     }, [data, dataFrames])
 
@@ -23,7 +23,7 @@ const FilmPage = () => {
       return <Loader/>
     }
     if(error) {
-      return <></> //IMPOSSIBLE
+      return <div>This film not found.</div> // do this with styles
     }
 
   return (

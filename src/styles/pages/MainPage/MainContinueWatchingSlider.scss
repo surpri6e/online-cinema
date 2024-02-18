@@ -1,19 +1,17 @@
 @import '../../vars.scss';
 
 .continue-watching_card {
-    a {
-        display: block;
-        height: 200px;
-        width: 380px;
-    }
-
-    img {
-        border-radius: 12px;
-        height: 200px;
-        width: 380px;
-        object-fit: cover;
-    }
+    height: 200px;
+    width: 380px;
+    display: block;
     position: relative;
+}
+
+.continue-watching_image {
+    border-radius: 12px;
+    height: 200px;
+    width: 380px;
+    object-fit: cover;
 }
 
 .continue-watching_arrow {
@@ -47,14 +45,16 @@
 
 @media screen and (max-width: $bp510) { 
     .continue-watching_card {
-        img {
-            height: 120px;
-            width: 175px;
-        }
+        height: 100px;
+        width: 190px;
+    }
+    .continue-watching_image {
+        height: 100px;
+        width: 190px;
     }
     .continue-watching_arrow {
         left: calc(50% - 16px);
-        top: calc(60px - 16px);
+        top: calc(50px - 16px);
 
         width: 32px;
         height: 32px;

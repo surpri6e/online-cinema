@@ -11,3 +11,10 @@
     font-size: 30px;
     margin-bottom: 30px;
 }
+
+@media screen and (max-width: $bp600) {
+    .title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+}

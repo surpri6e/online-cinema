@@ -1,15 +1,12 @@
-import { FC, useContext } from 'react'
-import { IFilmSmall } from '../../types/IFilmSmall'
+import { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { IsSearchingContext } from '../../context/isSearchingContext';
 import banner from '../../images/often-searched.png';
+import { getOftenSearchedFilms } from '../../utils/workWithLocalStorage';
 
-interface IHeaderOftenSearched {
-  items: IFilmSmall[];
-}
-
-const HeaderOftenSearched: FC<IHeaderOftenSearched> = ({items}) => {
+const HeaderOftenSearched = () => {
   const {setIsSearching} = useContext(IsSearchingContext);
+  const [oftenSearchedFilms] = useState(getOftenSearchedFilms())
 
   return (
     <div className='header_often-searched'>
@@ -19,11 +16,11 @@ const HeaderOftenSearched: FC<IHeaderOftenSearched> = ({items}) => {
                   <div className="title often-searched_title">Often searched</div>
                   <div className="often-searched_images">
                     {
-                      items.length === 0 
+                      oftenSearchedFilms.length === 0 
                       ?
                       <p>Haven't any searched :(</p>
                       :
-                      items.map(item => <Link key={item.kinopoiskId} to={`film/${item.kinopoiskId}`} className='often-searched_image' onClick={() => setIsSearching(false)}>
+                      oftenSearchedFilms.map(item => <Link key={item.kinopoiskId} to={`film/${item.kinopoiskId}`} className='often-searched_image' onClick={() => setIsSearching(false)}>
                         <img src={item.posterUrlPreview} alt='often searched film'/>
                       </Link>)
                     }

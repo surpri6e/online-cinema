@@ -3,6 +3,7 @@ import { IFilmSearched } from '../../types/IFilmSearched'
 import { Link } from 'react-router-dom'
 import { DebouncedState } from 'use-debounce';
 import { IsSearchingContext } from '../../context/isSearchingContext';
+import { typesOfFilms } from '../../utils/typesOfFilms';
 
 interface IHeaderSearchedFilm {
   info: IFilmSearched;
@@ -19,8 +20,8 @@ const HeaderSearchedFilm: FC<IHeaderSearchedFilm> = ({info, setText, setTextForS
       setText('')
       setTextForSearchedFilm('')
     }}>
-        <p>{info.nameRu ? info.nameRu : info.nameOriginal ? info.nameEn : info.nameOriginal}</p>
-        <p>{info.ratingKinopoisk}</p>
+        <p>{info.nameRu ? info.nameRu : info.nameEn ? info.nameEn : info.nameOriginal} <span>{typesOfFilms[info.type]}</span></p>
+        <p>{info.ratingKinopoisk ? info.ratingKinopoisk : "haven't rating"}</p> 
     </Link>
   )
 }

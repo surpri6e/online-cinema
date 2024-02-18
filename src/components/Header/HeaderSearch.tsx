@@ -13,9 +13,7 @@ interface IHeaderSearch {
 
 const HeaderSearch: FC<IHeaderSearch> = ({text, setText}) => {
   const {setIsSearching} = useContext(IsSearchingContext);
-
   const [textForSearchFilm, setTextForSearchedFilm] = useDebounce(text, 400);
-
   const {data, isLoading} = useGetFilmByKeywordsQuery(textForSearchFilm, {skip: textForSearchFilm.length === 0});
 
   return (

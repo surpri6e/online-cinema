@@ -1,0 +1,26 @@
+@import '../vars.scss';
+
+.thanks {
+    height: 30%;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    min-height: 350px;
+    border-radius: 15px;
+    padding: 25px;
+
+    img {
+        border-radius: 15px;
+    }
+}
+
+.thanks_title {
+    font-size: 56px;
+    z-index: 100;
+}
+
+@media screen and (max-width: $bp390) {
+    .thanks_title {
+        font-size: 40px;
+    }
+}

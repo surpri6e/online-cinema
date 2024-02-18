@@ -1,3 +1,5 @@
+@import '../../vars.scss';
+
 .main_body {
     border-radius: 15px;
     padding: 20px 30px 50px 30px;
@@ -11,4 +13,17 @@
     .main_categories {
         margin-bottom: 20px;
     }
+}
+
+.main_banner {
+    width: 100%;
+    height: 30%;
+    min-height: 350px;
+    object-fit: cover;
+}
+
+.main_block--banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

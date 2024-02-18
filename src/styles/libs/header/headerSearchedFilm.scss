@@ -12,4 +12,9 @@
     &:hover {
         background-color: lighten($bgc_main, 20);
     }
+
+    span {
+        font-size: 12px;
+        text-decoration: underline;
+    }
 }

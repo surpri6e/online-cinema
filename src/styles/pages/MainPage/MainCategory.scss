@@ -27,6 +27,18 @@
 
 @media screen and (max-width: $bp510) { 
     .main_category {
-        width: 80%;
+        width: 45%;
+        &:hover {
+            padding: 20px;
+        }
     }
-  }
+}
+
+@media screen and (max-width: $bp390) { 
+    .main_category {
+        width: 100%;
+        &:hover {
+            padding: 20px;
+        }
+    }
+}

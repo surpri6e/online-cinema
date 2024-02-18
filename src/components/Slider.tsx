@@ -1,19 +1,20 @@
 import { FC } from 'react'
 import { Link } from 'react-router-dom'
-import { IFilmSmall } from '../../types/IFilmSmall'
+import { IFilmSmall } from '../types/IFilmSmall'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
-import '../../styles/pages/MainPage/MainSlider.scss'
+import '../styles/components/Slider.scss'
 import 'swiper/css'
 import 'swiper/css/navigation'
-import arrow from '../../images/icons/arrow.png'
+import arrow from '../images/icons/arrow.png'
+import { breakpointsForSlider } from '../utils/breakpointsForSlider'
 
-interface IMainSlider {
+interface ISlider {
   items: IFilmSmall[] | undefined;
   nextElementClass: string;
 }
 
-const MainSlider: FC<IMainSlider> = ({items, nextElementClass}) => {
+const Slider: FC<ISlider> = ({items, nextElementClass}) => {
   return (
     <>
     <Swiper
@@ -25,32 +26,16 @@ const MainSlider: FC<IMainSlider> = ({items, nextElementClass}) => {
           loop={true}
           slidesPerView={1}
           allowTouchMove={false}
-          className='main_slider'
+          className='slider'
 
-          breakpoints={{
-            1400: {
-              slidesPerView: 6
-            },
-            1200: {
-              slidesPerView: 5
-            },
-            1000: {
-              slidesPerView: 4
-            },
-            700: {
-              slidesPerView: 3
-            },
-            550: {
-              slidesPerView: 2
-            }
-          }}
+          breakpoints={breakpointsForSlider}
 
         >
         {
           items?.map((slide) => {
             return ( 
               <SwiperSlide key={slide.kinopoiskId}>
-                  <Link to={`/film/${slide.kinopoiskId}`} className='main_card'>
+                  <Link to={`/film/${slide.kinopoiskId}`} className='slider_card'>
                     <img src={slide.posterUrlPreview} alt={`${slide.kinopoiskId}`} />
                   </Link>
               </SwiperSlide>
@@ -65,4 +50,4 @@ const MainSlider: FC<IMainSlider> = ({items, nextElementClass}) => {
   )
 }
 
-export default MainSlider
+export default Slider

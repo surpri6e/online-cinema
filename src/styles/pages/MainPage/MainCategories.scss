@@ -12,7 +12,18 @@
 
 @media screen and (max-width: $bp510) {
     .main_categories {
-        & > *:not(:last-child) {
+        & > *:nth-child(even) {
+            margin-right: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: $bp390) { 
+    .main_categories {
+        & > *:nth-child(odd) {
+            margin-right: 0px;
+        }
+        & > *:nth-child(even) {
             margin-right: 0px;
         }
     }

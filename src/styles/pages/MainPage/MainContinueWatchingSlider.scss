@@ -1,0 +1,67 @@
+@import '../../vars.scss';
+
+.continue-watching_card {
+    height: 200px;
+    width: 380px;
+    display: block;
+    position: relative;
+}
+
+.continue-watching_image {
+    border-radius: 12px;
+    height: 200px;
+    width: 380px;
+    object-fit: cover;
+}
+
+.continue-watching_arrow {
+    position: absolute;
+    left: calc(50% - 26px);
+    top: calc(100px - 26px);
+
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+
+    background-color: rgba($grey, 0.6);
+    border: 1px solid rgba(white, 0.8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 150ms linear;
+    opacity: 1;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+
+    img {
+        height: 22px;
+        width: 22px;
+    }
+}
+
+@media screen and (max-width: $bp510) { 
+    .continue-watching_card {
+        height: 100px;
+        width: 190px;
+    }
+    .continue-watching_image {
+        height: 100px;
+        width: 190px;
+    }
+    .continue-watching_arrow {
+        left: calc(50% - 16px);
+        top: calc(50px - 16px);
+
+        width: 32px;
+        height: 32px;
+
+        img {
+            height: 22px;
+            width: 22px;
+        }
+    }
+  }

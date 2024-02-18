@@ -1,14 +1,17 @@
-import { useState } from 'react'
+import { useContext } from 'react'
 import HeaderList from './HeaderList'
 import HeaderRight from './HeaderRight'
 import { Link, useLocation } from 'react-router-dom'
 import { MAIN_PAGE_PATH, REGISTRATION_PAGE_PATH } from '../../paths'
+import { IsSearchingContext } from '../../context/isSearchingContext'
+import HeaderOftenSearched from './HeaderOftenSearched'
 
 const Header = () => {
-  const [isSearching, setIsSearching] = useState(false)
+  const {isSearching} = useContext(IsSearchingContext);
   const adress = useLocation()
 
   return (
+    <>
     <header className="header">
       <div className="_Container">
         <div className="header_body">
@@ -21,12 +24,14 @@ const Header = () => {
           </div>
 
           <div className={`header_right ${isSearching ? 'header_right_is_searching' : ''}`}>
-            <HeaderRight isSearching={isSearching} setIsSearching={setIsSearching}/>
+            <HeaderRight/>
           </div>
 
         </div>
       </div>
     </header>
+    {isSearching ? <HeaderOftenSearched/> : <></>}
+    </>
   )
 }
 

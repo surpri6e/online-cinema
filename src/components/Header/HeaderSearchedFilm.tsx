@@ -20,7 +20,7 @@ const HeaderSearchedFilm: FC<IHeaderSearchedFilm> = ({info, setText, setTextForS
       setText('')
       setTextForSearchedFilm('')
     }}>
-        <p>{info.nameRu ? info.nameRu : info.nameEn ? info.nameEn : info.nameOriginal} <span>{typesOfFilms[info.type]}</span></p>
+        <p className='header_searched-film_left'>{info.nameRu ? info.nameRu : info.nameEn ? info.nameEn : info.nameOriginal} <span>{typesOfFilms[info.type]}</span></p>
         <p>{info.ratingKinopoisk ? info.ratingKinopoisk : "haven't rating"}</p> 
     </Link>
   )

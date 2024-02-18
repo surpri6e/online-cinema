@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { IsSearchingContext } from '../../context/isSearchingContext';
-import banner from '../../images/often-searched.png';
+import banner from '../../images/banner.png';
 import { getOftenSearchedFilms } from '../../utils/workWithLocalStorage';
 
 const HeaderOftenSearched = () => {
@@ -27,7 +27,9 @@ const HeaderOftenSearched = () => {
                   </div>
                 </div>
                 <div className="often-searched_right">
-                  <img src={banner} alt="banner"/>
+                  <Link to="film/1044280" >
+                    <img src={banner} alt="banner"/>
+                  </Link>
                 </div>
             </div>
         </div>

@@ -24,6 +24,13 @@
 }
 .often-searched_right {
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 470px;
+        height: 250px;
+    }
 }
 
 .often-searched_images {
@@ -66,9 +73,6 @@
         }
     }
     .often-searched_right {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         width: 100%;
     }
 }

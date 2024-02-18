@@ -37,3 +37,18 @@
         width: 80%;
     }
 }
+
+@media screen and (max-width: $bp600) {
+    .header_left {
+        width: 20%;
+        &_is_searching--telephone {
+            display: none;
+        }
+    }
+    .header_right {
+        width: 80%;
+        &_is_searching--telephone {
+            width: 100%;
+        }
+    }
+}

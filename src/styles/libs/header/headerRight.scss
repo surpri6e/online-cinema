@@ -19,3 +19,9 @@
         transform: scale(1.05);
     }
 }
+
+@media screen and (max-width: $bp600) {
+    .header_icons_profile {
+        display: none;
+    }
+}

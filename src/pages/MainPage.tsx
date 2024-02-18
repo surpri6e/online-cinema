@@ -7,6 +7,10 @@ import { useGetCartoonsQuery, useGetMoviesQuery, useGetSeriesQuery } from '../ap
 import { useState } from 'react'
 import MainContinueWatching from '../components/Main/MainContinueWatching'
 import { getContinueWatchingFilms } from '../utils/workWithLocalStorage'
+import banner from '../images/banner.png'
+import { Link } from 'react-router-dom'
+import MainTop from '../components/Main/MainTop'
+import Thanks from '../components/Thanks'
 
 const MainPage = () => {
 
@@ -30,7 +34,14 @@ const MainPage = () => {
           }
           <MainMovies items={dataMovies ? dataMovies : []} isLoading={isLoadingMovies} error={errorMovies}/>
           <MainSeries items={dataSeries ? dataSeries : []} isLoading={isLoadingSeries} error={errorSeries}/>
+          <Thanks/>
           <MainCartoons items={dataCartoons ? dataCartoons : []} isLoading={isLoadingCartoons} error={errorCartoons}/>
+          <MainTop items={dataMovies && dataSeries && dataCartoons ? dataMovies.slice(0, 3).concat(dataSeries.slice(0, 3)).concat(dataCartoons.slice(0, 3)) : []} isLoading={isLoadingMovies || isLoadingSeries || isLoadingCartoons} error={errorMovies || errorSeries || errorCartoons}/> 
+          <div className='main_block main_block--banner'>
+            <Link to="film/1044280" >
+              <img src={banner} alt="banner on main" className='main_banner' />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
@@ -38,7 +49,3 @@ const MainPage = () => {
 }
 
 export default MainPage
-
-function getContinueWatcingFilms(): any {
-  throw new Error('Function not implemented.')
-}

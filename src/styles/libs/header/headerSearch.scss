@@ -40,3 +40,9 @@
         width: 60%;
     }
 }
+
+@media screen and (max-width: $bp600) {
+    .header_search {
+        width: 70%;
+    }
+}

@@ -1,0 +1,26 @@
+@import '../../vars.scss';
+
+.top_card {
+    position: relative;
+    img {
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.top_card_number {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    font-size: 188px;
+    font-weight: 600;
+    color: rgba($white, 0.7);
+
+    transition: all 150ms linear;
+
+    &:hover {
+        color: $white;
+    }
+}

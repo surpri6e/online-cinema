@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { IFilmSmallWithFrame } from '../../types/IFilmSmall';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
@@ -9,7 +9,7 @@ import '../../styles/pages/MainPage/MainContinueWatchingSlider.scss'
 import continue_watching from '../../images/continue-watching.png'
 
 interface IMainContinueWatchingSlider {
-    items: IFilmSmallWithFrame[];
+    items: IFilmSmallWithFrame[] | undefined;
     nextElementClass: string;
 }
 
@@ -26,6 +26,7 @@ const MainContinueWatchingSlider: FC<IMainContinueWatchingSlider> = ({items, nex
           slidesPerView={1}
           allowTouchMove={false}
           className='slider'
+          spaceBetween={5}
 
           breakpoints={breakpointsForMainContinueWatchingSlider}
 

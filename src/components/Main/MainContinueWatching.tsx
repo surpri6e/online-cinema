@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { IFilmSmallWithFrame } from '../../types/IFilmSmall'
 import MainContinueWatchingSlider from './MainContinueWatchingSlider'
 

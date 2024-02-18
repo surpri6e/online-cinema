@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import '../styles/components/Thanks.scss'
 import fon from '../images/fon.png'
 

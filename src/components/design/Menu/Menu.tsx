@@ -1,4 +1,3 @@
-import React from 'react'
 import './Menu.scss'
 import { Link } from 'react-router-dom';
 import { MOVIES_PAGE_PATH, SERIES_PAGE_PATH, CARTOONS_PAGE_PATH, REGISTRATION_PAGE_PATH } from '../../../paths';

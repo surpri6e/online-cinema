@@ -1,0 +1,11 @@
+@import '../vars.scss';
+
+.fpw_body {
+    padding: 20px 30px 50px 30px;
+    background-color: $bg;
+    border-radius: 15px;
+
+    & > *:not(:last-child) {
+        margin-bottom: 80px;
+    }
+}

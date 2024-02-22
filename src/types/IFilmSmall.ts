@@ -10,3 +10,11 @@ export interface IFilmFrame {
 export interface IFilmSmallWithFrame extends IFilmFrame {
     kinopoiskId: number;
 }
+
+export interface IFilmGenre {
+    genre: string;
+}
+
+export interface IFilmSmallWithGenres extends IFilmSmall {
+    genres: IFilmGenre[]
+}

@@ -1,0 +1,70 @@
+@import '../vars.scss';
+
+.dpc {
+    height: 664px;
+}
+
+.dpc_body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dpc_panel {
+    height: 400px;
+    min-width: 400px;
+    background-color: rgba($white, 0.2);
+    backdrop-filter: blur(5px);
+    z-index: 100;
+
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &_info {
+        display: flex;
+        flex-direction: column;
+        & > *:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.dpc_title {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.dpc_input {
+    background-color: rgba(#020510, 0.7);
+    height: 50px;
+    width: 348px;
+    border-radius: 10px;
+    color: inherit;
+    padding: 0 10px;
+
+    &_body {
+        position: relative;
+    }
+}
+
+.dpc_btn {
+    background-color: $pink;
+    height: 50px;
+    width: 348px;
+    border-radius: 10px;
+    color: inherit;
+    font-size: 22px;
+    font-weight: 600;
+
+    transition: all 150ms linear;
+
+    &:hover {
+        background-color: lighten($pink, 10);
+    }
+
+}

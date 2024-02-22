@@ -13,7 +13,7 @@ interface IHeaderSearch {
 
 const HeaderSearch: FC<IHeaderSearch> = ({text, setText}) => {
   const {setIsSearching} = useContext(IsSearchingContext);
-  const [textForSearchFilm, setTextForSearchedFilm] = useDebounce(text, 400);
+  const [textForSearchFilm] = useDebounce(text, 400);
   const {data, isLoading} = useGetFilmByKeywordsQuery(textForSearchFilm, {skip: textForSearchFilm.length === 0});
 
   return (
@@ -22,9 +22,10 @@ const HeaderSearch: FC<IHeaderSearch> = ({text, setText}) => {
         <div className="_Ibg header_icons header_icons_cross" onClick={() => {
           setIsSearching(false)
           setText('')
-          setTextForSearchedFilm('')
         }}>
+
             <img src={cross} alt="cross" />
+
         </div>
         <div className="header_searched-films">
           {
@@ -36,7 +37,7 @@ const HeaderSearch: FC<IHeaderSearch> = ({text, setText}) => {
             ?
             <div className='header_no-searched-films'>There is no movie with this title</div>
             :
-            data && data.map((film) => <HeaderSearchedFilm key={film.kinopoiskId} info={film} setText={setText} setTextForSearchedFilm={setTextForSearchedFilm} />)
+            data && data.map((film) => <HeaderSearchedFilm key={film.kinopoiskId} info={film} setText={setText}/>)
           }
         </div>
     </div>

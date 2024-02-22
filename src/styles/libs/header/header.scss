@@ -40,13 +40,13 @@
 
 @media screen and (max-width: $bp600) {
     .header_left {
-        width: 20%;
+        width: 70%;
         &_is_searching--telephone {
             display: none;
         }
     }
     .header_right {
-        width: 80%;
+        width: 30%;
         &_is_searching--telephone {
             width: 100%;
         }

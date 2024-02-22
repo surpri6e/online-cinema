@@ -1,0 +1,10 @@
+@import '../../../styles/vars.scss';
+
+.hw {
+    position: absolute;
+    right: -50px;
+    bottom: -10px;
+    background-color: darken($pink, 20);
+    padding: 5px;
+    border-radius: 5px;
+}

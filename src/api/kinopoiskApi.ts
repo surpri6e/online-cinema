@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { config } from "../config";
-import { IFilmFrame, IFilmSmall } from "../types/IFilmSmall";
+import { IFilmFrame, IFilmSmall, IFilmSmallWithGenres } from "../types/IFilmSmall";
 import { IFilmSearched } from "../types/IFilmSearched";
 import { KINOPOISK_API_LINK } from "../constants";
 import { IFilm } from "../types/IFilm";
@@ -90,8 +90,50 @@ export const kinopoisApi = createApi({
             transformResponse: (response: any): IFilmFrame[] => {
                 return response.items;
             }
-        })
+        }),
+        getMoviesPages: builder.query({
+            query: (page: number) =>  {
+                return {
+                    url: `films/collections?type=TOP_POPULAR_MOVIES&page=${page}`,
+                    headers: {
+                        'X-API-KEY': config.X_API_KEY,
+                        'Content-Type': 'application/json',
+                    },
+                }
+            },
+            transformResponse: (response: any): IFilmSmallWithGenres[] => {
+                return response.items;
+            },
+        }),
+        getCartoonsPages: builder.query({
+            query: (page: number) =>  {
+                return {
+                    url: `films/collections?type=KIDS_ANIMATION_THEME&page=${page}`,
+                    headers: {
+                        'X-API-KEY': config.X_API_KEY,
+                        'Content-Type': 'application/json',
+                    },
+                }
+            },
+            transformResponse: (response: any): IFilmSmallWithGenres[] => {
+                return response.items;
+            },
+        }),
+        getSeriesPages: builder.query({
+            query: (page: number) =>  {
+                return {
+                    url: `films/collections?type=TOP_250_TV_SHOWS&page=${page}`,
+                    headers: {
+                        'X-API-KEY': config.X_API_KEY,
+                        'Content-Type': 'application/json',
+                    },
+                }
+            },
+            transformResponse: (response: any): IFilmSmallWithGenres[] => {
+                return response.items;
+            }
+        }),
     }),
 })
 
-export const { useGetCartoonsQuery, useGetMoviesQuery, useGetSeriesQuery, useGetFilmByKeywordsQuery, useGetFilmByIdQuery, useGetFramesByIdQuery } = kinopoisApi
+export const { useGetCartoonsQuery, useGetMoviesQuery, useGetSeriesQuery, useGetFilmByKeywordsQuery, useGetFilmByIdQuery, useGetFramesByIdQuery, useGetMoviesPagesQuery, useGetCartoonsPagesQuery, useGetSeriesPagesQuery } = kinopoisApi

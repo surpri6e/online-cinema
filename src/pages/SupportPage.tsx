@@ -3,6 +3,10 @@ import { validateEmail } from '../utils/validateEmail'
 import '../styles/components/DataPagesComponents.scss'
 import fon from '../images/fon.png';
 import HelpWindow from "../components/design/HelpWindow/HelpWindow";
+import { useNavigate } from "react-router-dom";
+import { doc, setDoc } from "firebase/firestore";
+import { db } from "../main";
+import { IQuestion } from "../types/IQuestion";
 
 const SupportPage = () => {
   const [email, setEmail] = useState('');
@@ -10,6 +14,8 @@ const SupportPage = () => {
 
   const [isErrorEmail, setIsErrorEmail] = useState(false);
   const [isErrorAsk, setIsErrorAsk] = useState(false);
+
+  const navigate = useNavigate();
 
   const changeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
@@ -19,7 +25,7 @@ const SupportPage = () => {
     setAsk(e.target.value);
   }
 
-  const onClickBtn = () => {
+  const onClickBtn = async () => {
     if(ask.length <= 15) {
       setIsErrorAsk(true);
       setTimeout(() => {
@@ -36,8 +42,12 @@ const SupportPage = () => {
       setIsErrorAsk(false);
       setIsErrorEmail(false);
 
+      await setDoc(doc(db, "questions", email), {
+        email,
+        ask
+      } as IQuestion)
 
-      console.log('logic');
+      navigate('/')
     }
   }
   
@@ -58,7 +68,7 @@ const SupportPage = () => {
 
               <div className="dpc_input_body">
                 <input type="text" className='dpc_input' placeholder='Your ask' onChange={changeAsk}/>
-                {isErrorAsk ? <HelpWindow title="Ask need be more 20 symbols."/> : <></>}
+                {isErrorAsk ? <HelpWindow title="Ask need be more 15 symbols."/> : <></>}
               </div>
 
               <button className="dpc_btn" onClick={onClickBtn}>Ask</button>

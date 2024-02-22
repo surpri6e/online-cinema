@@ -8,4 +8,5 @@ export const config: IConfig = {
     messagingSenderId: import.meta.env.VITE_APP_messagingSenderId,
     projectId: import.meta.env.VITE_APP_projectId,
     storageBucket: import.meta.env.VITE_APP_storageBucket,
+    measurementId: import.meta.env.VITE_APP_measurementId,
 }

@@ -6,4 +6,5 @@
         VITE_APP_messagingSenderId: string;
         VITE_APP_appId: string;
         VITE_APP_X_API_KEY: string;
+        VITE_APP_measurementId: string;
     }

@@ -7,7 +7,7 @@ import { useState } from 'react'
 import { IsSearchingContext } from './context/isSearchingContext'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { auth } from './main'
-import { IsAuthContext } from './context/IsAuth'
+import { IsAuthContext } from './context/isAuth'
 
 
 function App() {

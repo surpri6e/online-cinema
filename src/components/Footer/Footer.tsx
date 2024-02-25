@@ -3,10 +3,14 @@ import twitter from '../../images/icons/twitter.svg'
 import facebook from '../../images/icons/facebook.svg'
 import telegram from '../../images/icons/telegram.svg'
 import { Link } from 'react-router-dom'
-import { MAIN_PAGE_PATH, SUPPORT_PAGE_PATH, YOU_PAGE_PATH } from '../../paths'
+import { MAIN_PAGE_PATH, REGISTRATION_PAGE_PATH, SUPPORT_PAGE_PATH, YOU_PAGE_PATH } from '../../paths'
 import { FACEBOOK_LINK, INSTAGRAM_LINK, TELEGRAM_LINK, TWITTER_LINK } from '../../constants'
+import { useContext } from 'react'
+import { IsAuthContext } from '../../context/isAuth'
 
 const Footer = () => {
+  const {user} = useContext(IsAuthContext);
+
   return (
     <footer className='footer'>
       <div className="_Container">
@@ -22,7 +26,7 @@ const Footer = () => {
           <ul className="footer_help">
             <li><Link to={MAIN_PAGE_PATH}>Home</Link></li>
             <li><Link to={SUPPORT_PAGE_PATH}>Support</Link></li>
-            <li><Link to={YOU_PAGE_PATH}>Account</Link></li>
+            <li><Link to={user ? YOU_PAGE_PATH : REGISTRATION_PAGE_PATH}>Account</Link></li>
           </ul>
 
           <h3 className="footer_logo logo">PlayOn</h3>

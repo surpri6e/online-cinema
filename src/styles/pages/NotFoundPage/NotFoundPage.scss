@@ -1,0 +1,14 @@
+@import '../../vars.scss';
+
+.not-found {
+    height: $height_page;
+}
+
+.not-found_body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 44px;
+}

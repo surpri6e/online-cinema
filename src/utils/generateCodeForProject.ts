@@ -4,7 +4,7 @@ const alphabet = alphabet_s.concat(alphabet_b);
 
 
 // NOT SURE
-export function generateCodeForTelegram(): string {
+export function generateCodeForProject(): string {
     let result: string = '';
     const date = Date.now().toString()
     const left = date.slice(0, 6);

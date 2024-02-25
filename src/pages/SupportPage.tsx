@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { doc, setDoc } from "firebase/firestore";
 import { db } from "../main";
 import { IQuestion } from "../types/IQuestion";
+import { generateCodeForProject } from "../utils/generateCodeForProject";
 
 const SupportPage = () => {
   const [email, setEmail] = useState('');
@@ -42,7 +43,7 @@ const SupportPage = () => {
       setIsErrorAsk(false);
       setIsErrorEmail(false);
 
-      await setDoc(doc(db, "questions", email), {
+      await setDoc(doc(db, "questions", generateCodeForProject()), {
         email,
         ask
       } as IQuestion)

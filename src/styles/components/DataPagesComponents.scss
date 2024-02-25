@@ -1,7 +1,7 @@
 @import '../vars.scss';
 
 .dpc {
-    height: 664px;
+    height: $height_page;
 }
 
 .dpc_body {
@@ -59,15 +59,22 @@
     width: 348px;
     border-radius: 10px;
     color: inherit;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 600;
 
     transition: all 150ms linear;
+
+    &--google {
+        background-color: $bgc_main;
+    }
 
     &:hover {
         background-color: lighten($pink, 10);
     }
 
+    &--google:hover {
+        background-color: lighten($bgc_main, 10);
+    }
 }
 
 @media screen and (max-width: $bp510) {

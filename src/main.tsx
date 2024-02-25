@@ -7,9 +7,11 @@ import { initializeApp } from 'firebase/app'
 import { config } from './config.ts'
 import { getAnalytics } from 'firebase/analytics'
 import { getFirestore } from 'firebase/firestore'
+import { getAuth } from 'firebase/auth'
 
 export const firebaseApp = initializeApp({apiKey: config.apiKey, appId: config.appId, authDomain: config.authDomain, projectId: config.projectId, storageBucket: config.storageBucket, messagingSenderId: config.messagingSenderId, measurementId: config.measurementId})
 export const db = getFirestore(firebaseApp)
+export const auth = getAuth()
 
 getAnalytics(firebaseApp);
 

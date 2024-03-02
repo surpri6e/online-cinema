@@ -8,3 +8,9 @@
     padding: 5px;
     border-radius: 5px;
 }
+
+@media screen and (max-width: $bp390) {
+    .hw {
+        right: -5px;
+    }
+}

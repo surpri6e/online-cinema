@@ -1,11 +1,10 @@
 @import '../../../styles/vars.scss';
 
-
-  .burger-checkbox {
+.burger-checkbox {
     position: absolute;
     visibility: hidden;
-  }
-  .menu {
+}
+.menu {
     display: none;
     width: 28px;
     height: 28px;
@@ -14,8 +13,8 @@
     cursor: pointer;
     justify-content: center;
     align-items: center;
-  }
-  .burger {
+}
+.burger {
     z-index: 10;
     cursor: pointer;
     display: none;
@@ -25,10 +24,10 @@
     width: 18px;
     height: 18px;
     position: relative;
-  }
+}
 
-  .burger::before,
-  .burger::after {
+.burger::before,
+.burger::after {
     content: '';
     left: calc(50% - 9px);
     position: absolute;
@@ -37,32 +36,42 @@
     height: 2px;
     border-radius: 2px;
     background: $white;
-  }
+}
 
-  .burger::before {
+.burger::before {
     top: 0;
     box-shadow: 0 8px 0 $white;
-    transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
-  }
-  .burger::after {
+    transition:
+        box-shadow 0.3s 0.15s,
+        top 0.3s 0.15s,
+        transform 0.3s;
+}
+.burger::after {
     bottom: 0;
-    transition: bottom .3s .15s, transform .3s;
-  }
+    transition:
+        bottom 0.3s 0.15s,
+        transform 0.3s;
+}
 
-  .burger-checkbox:checked + .burger::before {
+.burger-checkbox:checked + .burger::before {
     top: 8px;
     transform: rotate(45deg);
-    box-shadow: 0 6px 0 rgba(0,0,0,0);
-    transition: box-shadow .15s, top .3s, transform .3s .15s;
-  }
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+    transition:
+        box-shadow 0.15s,
+        top 0.3s,
+        transform 0.3s 0.15s;
+}
 
-  .burger-checkbox:checked + .burger::after {
+.burger-checkbox:checked + .burger::after {
     bottom: 8px;
     transform: rotate(-45deg);
-    transition: bottom .3s, transform .3s .15s;
-  }
-  
-  .menu-list {
+    transition:
+        bottom 0.3s,
+        transform 0.3s 0.15s;
+}
+
+.menu-list {
     top: 20px;
     right: 0;
     position: absolute;
@@ -73,25 +82,25 @@
     background: $bgc_main;
     list-style-type: none;
     transform: translateX(100%);
-    transition: .3s;
+    transition: 0.3s;
     width: 200px;
     z-index: 1;
-  }
-  
-  .menu-item {
+}
+
+.menu-item {
     display: block;
     padding: 8px;
     color: white;
     font-size: 18px;
     text-align: center;
     text-decoration: none;
-  }
-  .menu-item:hover {
-    background: rgba(255,255,255,.2)
-  }
-  .burger-checkbox:checked ~ .menu-list {
+}
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+.burger-checkbox:checked ~ .menu-list {
     transform: translateX(0);
-  }
+}
 
 @media screen and (max-width: $bp600) {
     .menu {

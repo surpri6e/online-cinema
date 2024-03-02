@@ -2,7 +2,7 @@ $maxWidthPage: 1920;
 
 //! Adaptive font
 @mixin adapFont($pcSize, $mobSize) {
- $addSize: $pcSize - $mobSize;
- $maxWidthPage: $maxWidthPage - 320;
- font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthPage}));
+    $addSize: $pcSize - $mobSize;
+    $maxWidthPage: $maxWidthPage - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthPage}));
 }

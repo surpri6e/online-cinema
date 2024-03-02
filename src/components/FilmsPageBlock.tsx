@@ -1,6 +1,6 @@
-import { FC } from "react";
-import Slider from "./Slider";
-import { IFilmSmall } from "../types/IFilmSmall";
+import { FC } from 'react';
+import Slider from './Slider';
+import { IFilmSmall } from '../types/IFilmSmall';
 
 interface IFilmsPageBlock {
     title: string;
@@ -8,13 +8,13 @@ interface IFilmsPageBlock {
     items: IFilmSmall[];
 }
 
-const FilmsPageBlock: FC<IFilmsPageBlock> = ({title, nextElementClass, items}) => {
-  return (
-    <div className="fpb">
-        <div className="title">{title}</div>
-        <Slider items={items} nextElementClass={nextElementClass}/>
-    </div>
-  )
-}
+const FilmsPageBlock: FC<IFilmsPageBlock> = ({ title, nextElementClass, items }) => {
+    return (
+        <div className='fpb'>
+            <div className='title'>{title}</div>
+            <Slider items={items} nextElementClass={nextElementClass} />
+        </div>
+    );
+};
 
-export default FilmsPageBlock
+export default FilmsPageBlock;

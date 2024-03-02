@@ -16,5 +16,5 @@ export interface IFilmGenre {
 }
 
 export interface IFilmSmallWithGenres extends IFilmSmall {
-    genres: IFilmGenre[]
+    genres: IFilmGenre[];
 }

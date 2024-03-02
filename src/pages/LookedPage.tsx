@@ -1,7 +1,5 @@
 const LookedPage = () => {
-  return (
-    <div>LookedPage</div>
-  )
-}
+    return <div>LookedPage</div>;
+};
 
-export default LookedPage
+export default LookedPage;

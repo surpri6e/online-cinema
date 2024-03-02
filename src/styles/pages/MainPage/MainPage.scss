@@ -3,13 +3,13 @@
 .main_body {
     border-radius: 15px;
     padding: 20px 30px 50px 30px;
-    background-color: #0A031C;
+    background-color: #0a031c;
 
     & > *:not(:last-child) {
         margin-bottom: 80px;
     }
 
-    // reuse this class 
+    // reuse this class
     .main_categories {
         margin-bottom: 20px;
     }

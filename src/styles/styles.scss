@@ -6,7 +6,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-  html {
+html {
     font-size: 62.5%;
 
     overflow-x: hidden;
@@ -15,9 +15,9 @@
 
     font-family: 'Poppins', sans-serif;
     color: $white;
-  }
-  
-  body {
+}
+
+body {
     background-color: $bgc_main;
 
     width: 100%;
@@ -25,44 +25,44 @@
 
     overflow-x: hidden;
     position: fixed;
-  }
-   
-  ._Container {
+}
+
+._Container {
     height: 100%;
 
     max-width: $container;
 
     margin: 0 auto;
     padding: 0 1.5rem;
-  }
-  
-  ._Ibg {
+}
+
+._Ibg {
     position: relative;
-  
+
     img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-      object-fit: cover;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        object-fit: cover;
     }
-  }
-  
-  #root {
+}
+
+#root {
     min-height: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    
+
     font-weight: 400;
     @include adapFont(16, 14);
     line-height: 1;
-  }
+}
 
-  .content {
+.content {
     flex: 1 0 auto;
-  }
+}
 
 @import './libs/header/header.scss';
 @import './libs/header/headerList.scss';

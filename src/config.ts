@@ -1,4 +1,4 @@
-import { IConfig } from "./types/IConfig";
+import { IConfig } from './types/IConfig';
 
 export const config: IConfig = {
     X_API_KEY: import.meta.env.VITE_APP_X_API_KEY,
@@ -9,4 +9,4 @@ export const config: IConfig = {
     projectId: import.meta.env.VITE_APP_projectId,
     storageBucket: import.meta.env.VITE_APP_storageBucket,
     measurementId: import.meta.env.VITE_APP_measurementId,
-}
+};

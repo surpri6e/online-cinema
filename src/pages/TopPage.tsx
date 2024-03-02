@@ -1,7 +1,5 @@
 const TopPage = () => {
-  return (
-    <div>TopPage</div>
-  )
-}
+    return <div>TopPage</div>;
+};
 
-export default TopPage
+export default TopPage;

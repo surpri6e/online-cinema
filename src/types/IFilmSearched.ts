@@ -2,9 +2,9 @@ export type TTypesOfFilm = 'FILM' | 'TV_SHOW' | 'TV_SERIES' | 'MINI_SERIES' | 'V
 
 export interface IFilmSearched {
     kinopoiskId: number;
-    nameOriginal: string,
+    nameOriginal: string;
     nameRu: string;
-    nameEn: string
+    nameEn: string;
     ratingKinopoisk: number;
     type: TTypesOfFilm;
 }

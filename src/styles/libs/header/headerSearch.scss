@@ -29,11 +29,10 @@
     justify-content: center;
 
     background-color: lighten($bgc_main, 20);
-    
+
     padding: 15px;
     border-radius: 5px;
 }
-
 
 @media screen and (max-width: 850px) {
     .header_search {

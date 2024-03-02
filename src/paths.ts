@@ -10,4 +10,4 @@ export const LOOKED_PAGE_PATH = '/looked';
 export const YOU_PAGE_PATH = '/you';
 export const SUPPORT_PAGE_PATH = '/support';
 export const NOT_FOUND_PAGE_PATH = '/notfound';
-export const ALL_SEARCH_PATH = '/search/:keywords' // ??????
+export const ALL_SEARCH_PATH = '/search/:keywords'; // ??????

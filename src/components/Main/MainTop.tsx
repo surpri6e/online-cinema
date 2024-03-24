@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { IMainBlock } from '../../types/IMainBlock';
-import Loader from '../design/Loader/Loader';
+import Loader from '../Loader/Loader';
 import MainTopSlider from './MainTopSlider';
 
 const MainTop: FC<IMainBlock> = ({ items, error, isLoading }) => {

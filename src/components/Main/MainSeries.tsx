@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Slider from '../Slider';
-import Loader from '../design/Loader/Loader';
+import Loader from '../Loader/Loader';
 import { IMainBlock } from '../../types/IMainBlock';
 
 const MainSeries: FC<IMainBlock> = ({ items, isLoading, error }) => {

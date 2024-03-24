@@ -8,6 +8,8 @@ import { FACEBOOK_LINK, INSTAGRAM_LINK, TELEGRAM_LINK, TWITTER_LINK } from '../.
 import { useContext } from 'react';
 import { IsAuthContext } from '../../context/isAuth';
 
+import './Footer.scss';
+
 const Footer = () => {
     const { user } = useContext(IsAuthContext);
 
@@ -50,7 +52,7 @@ const Footer = () => {
                         </li>
                     </ul>
 
-                    <h3 className='footer_logo logo'>PlayOn</h3>
+                    <h3 className='footer_logo logo'>SFilms</h3>
                 </div>
             </div>
         </footer>

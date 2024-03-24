@@ -1,8 +1,8 @@
 import './Menu.scss';
 import { Link } from 'react-router-dom';
-import { MOVIES_PAGE_PATH, SERIES_PAGE_PATH, CARTOONS_PAGE_PATH, REGISTRATION_PAGE_PATH, YOU_PAGE_PATH } from '../../../paths';
+import { MOVIES_PAGE_PATH, SERIES_PAGE_PATH, CARTOONS_PAGE_PATH, REGISTRATION_PAGE_PATH, YOU_PAGE_PATH } from '../../paths';
 import { useContext } from 'react';
-import { IsAuthContext } from '../../../context/isAuth';
+import { IsAuthContext } from '../../context/isAuth';
 
 const Menu = () => {
     const { user } = useContext(IsAuthContext);

@@ -3,7 +3,7 @@ import { FILM_PLAYER_LINK } from '../constants';
 import { useEffect } from 'react';
 import { useGetFilmByIdQuery, useGetFramesByIdQuery } from '../api/kinopoiskApi';
 import { addContinueWatchingFilm, addOftenSearchedFilm } from '../utils/workWithLocalStorage';
-import Loader from '../components/design/Loader/Loader';
+import Loader from '../components/Loader/Loader';
 
 const FilmPage = () => {
     const { idFilm } = useParams();

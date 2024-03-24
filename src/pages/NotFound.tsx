@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { IsAuthContext } from '../context/isAuth';
-import Loader from '../components/design/Loader/Loader';
+import Loader from '../components/Loader/Loader';
 import '../styles/pages/NotFoundPage/NotFoundPage.scss';
 
 const NotFound = () => {

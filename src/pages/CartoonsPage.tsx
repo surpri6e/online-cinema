@@ -2,7 +2,7 @@ import { useGetCartoonsPagesQuery } from '../api/kinopoiskApi';
 import FilmsPageBlock from '../components/FilmsPageBlock';
 import FilmsPageHeader from '../components/FilmsPageHeader';
 import Thanks from '../components/Thanks';
-import Loader from '../components/design/Loader/Loader';
+import Loader from '../components/Loader/Loader';
 import '../styles/components/FilmsPagesWrapper.scss';
 import { IFilmSmall } from '../types/IFilmSmall';
 

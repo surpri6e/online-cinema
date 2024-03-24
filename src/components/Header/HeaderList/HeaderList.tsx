@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { CARTOONS_PAGE_PATH, MOVIES_PAGE_PATH, SERIES_PAGE_PATH } from '../../paths';
+import { CARTOONS_PAGE_PATH, MOVIES_PAGE_PATH, SERIES_PAGE_PATH } from '../../../paths';
+import './HeaderList.scss';
 
 const HeaderList = () => {
     return (

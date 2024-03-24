@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { IsAuthContext } from '../context/isAuth';
-import Loader from '../components/design/Loader/Loader';
+import Loader from '../components/Loader/Loader';
 import '../styles/pages/YouPage/YouPage.scss';
 import '../styles/components/FilmsPagesWrapper.scss';
 //import { useDeleteUser, useSignOut } from 'react-firebase-hooks/auth';

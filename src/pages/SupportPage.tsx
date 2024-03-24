@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { validateEmail } from '../utils/validateEmail';
 import '../styles/components/DataPagesComponents.scss';
 import fon from '../images/fon.png';
-import HelpWindow from '../components/design/HelpWindow/HelpWindow';
+import HelpWindow from '../components/HelpWindow/HelpWindow';
 import { useNavigate } from 'react-router-dom';
 import { doc, setDoc } from 'firebase/firestore';
 import { db } from '../main';

@@ -1,11 +1,12 @@
 import { FC, useContext } from 'react';
-import HeaderInput from './HeaderInput';
-import cross from '../../images/icons/cross.svg';
+import HeaderInput from '../HeaderInput/HeaderInput';
+import cross from '../../../images/icons/cross.svg';
 import { useDebounce } from 'use-debounce';
-import { useGetFilmByKeywordsQuery } from '../../api/kinopoiskApi';
-import HeaderSearchedFilm from './HeaderSearchedFilm';
-import { IsSearchingContext } from '../../context/isSearchingContext';
+import { useGetFilmByKeywordsQuery } from '../../../api/kinopoiskApi';
+import HeaderSearchedFilm from '../HeaderSearchedFilm/HeaderSearchedFilm';
+import { IsSearchingContext } from '../../../context/isSearchingContext';
 
+import './HeaderSearch.scss';
 interface IHeaderSearch {
     text: string;
     setText: React.Dispatch<React.SetStateAction<string>>;

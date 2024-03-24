@@ -1,7 +1,7 @@
 import { useGetMoviesPagesQuery } from '../api/kinopoiskApi';
 import Thanks from '../components/Thanks';
 import '../styles/components/FilmsPagesWrapper.scss';
-import Loader from '../components/design/Loader/Loader';
+import Loader from '../components/Loader/Loader';
 import FilmsPageBlock from '../components/FilmsPageBlock';
 import { IFilmSmall } from '../types/IFilmSmall';
 import FilmsPageHeader from '../components/FilmsPageHeader';

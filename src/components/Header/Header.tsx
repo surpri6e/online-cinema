@@ -1,11 +1,13 @@
 import { useContext, useState } from 'react';
-import HeaderList from './HeaderList';
-import HeaderRight from './HeaderRight';
+import HeaderList from './HeaderList/HeaderList';
+import HeaderRight from './HeaderRight/HeaderRight';
 import { Link, useLocation } from 'react-router-dom';
 import { MAIN_PAGE_PATH, REGISTRATION_PAGE_PATH, SUPPORT_PAGE_PATH } from '../../paths';
 import { IsSearchingContext } from '../../context/isSearchingContext';
-import HeaderOftenSearched from './HeaderOftenSearched';
-import Menu from '../design/Menu/Menu';
+import HeaderOftenSearched from './HeaderOftenSearched/HeaderOftenSearched';
+import Menu from '../Menu/Menu';
+
+import './Header.scss';
 
 const Header = () => {
     const { isSearching } = useContext(IsSearchingContext);
@@ -21,7 +23,7 @@ const Header = () => {
                             className={`header_left ${isSearching ? 'header_left_is_searching' : ''} ${width <= 600 && isSearching ? 'header_left_is_searching--telephone' : ''}`}
                         >
                             <Link to={MAIN_PAGE_PATH} className='logo'>
-                                PlayOn
+                                SFilms
                             </Link>
                             {REGISTRATION_PAGE_PATH === adress.pathname || SUPPORT_PAGE_PATH === adress.pathname ? <></> : isSearching ? <></> : <HeaderList />}
                         </div>

@@ -1,11 +1,13 @@
 import { useContext, useState } from 'react';
-import search from '../../images/icons/search.png';
-import profile from '../../images/icons/profile.svg';
+import search from '../../../images/icons/search.png';
+import profile from '../../../images/icons/profile.svg';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import HeaderSearch from './HeaderSearch';
-import { REGISTRATION_PAGE_PATH, SUPPORT_PAGE_PATH, YOU_PAGE_PATH } from '../../paths';
-import { IsSearchingContext } from '../../context/isSearchingContext';
-import { IsAuthContext } from '../../context/isAuth';
+import HeaderSearch from '../HeaderSearch/HeaderSearch';
+import { REGISTRATION_PAGE_PATH, SUPPORT_PAGE_PATH, YOU_PAGE_PATH } from '../../../paths';
+import { IsSearchingContext } from '../../../context/isSearchingContext';
+import { IsAuthContext } from '../../../context/isAuth';
+
+import './HeaderRight.scss';
 
 const HeaderRight = () => {
     const { isSearching, setIsSearching } = useContext(IsSearchingContext);

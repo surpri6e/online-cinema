@@ -1,8 +1,10 @@
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { IsSearchingContext } from '../../context/isSearchingContext';
-import banner from '../../images/banner.png';
-import { getOftenSearchedFilms } from '../../utils/workWithLocalStorage';
+import { IsSearchingContext } from '../../../context/isSearchingContext';
+import banner from '../../../images/banner.png';
+import { getOftenSearchedFilms } from '../../../utils/workWithLocalStorage';
+
+import './HeaderOftenSearched.scss';
 
 const HeaderOftenSearched = () => {
     const { setIsSearching } = useContext(IsSearchingContext);

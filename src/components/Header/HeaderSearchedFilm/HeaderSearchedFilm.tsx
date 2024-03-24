@@ -1,8 +1,10 @@
 import { FC, useContext } from 'react';
-import { IFilmSearched } from '../../types/IFilmSearched';
+import { IFilmSearched } from '../../../types/IFilmSearched';
 import { Link } from 'react-router-dom';
-import { IsSearchingContext } from '../../context/isSearchingContext';
-import { typesOfFilms } from '../../utils/typesOfFilms';
+import { IsSearchingContext } from '../../../context/isSearchingContext';
+import { typesOfFilms } from '../../../utils/typesOfFilms';
+
+import './HeaderSearchedFilm.scss';
 
 interface IHeaderSearchedFilm {
     info: IFilmSearched;

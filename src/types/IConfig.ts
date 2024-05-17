@@ -6,5 +6,5 @@ export interface IConfig {
     messagingSenderId: string;
     appId: string;
     X_API_KEY: string;
-    measurementId: string;
+    //measurementId: string; &&&&&&&&!!!!!!!!!!!!!
 }

@@ -1,5 +1,5 @@
 export const KINOPOISK_API_LINK = 'https://kinopoiskapiunofficial.tech/api/v2.2/';
-export const FILM_PLAYER_LINK = 'https://123123.svetacdn.in/IAF0wWTdNYZm?kp_id=';
+export const FILM_PLAYER_LINK = 'https://api.zenithjs.ws/embed/kp/';
 
 export const INSTAGRAM_LINK = 'https://www.instagram.com';
 export const TWITTER_LINK = 'https://twitter.com/?lang=en';

@@ -6,4 +6,6 @@ export interface IFilm {
     ratingAgeLimits: string;
     year: number;
     genre: string;
+    nameRu: string;
+    nameOriginal: string;
 }

@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useGetFilmByIdQuery, useGetFramesByIdQuery } from '../api/kinopoiskApi';
 import { addContinueWatchingFilm, addOftenSearchedFilm } from '../utils/workWithLocalStorage';
 import Loader from '../components/Loader/Loader';
+import '../styles/pages/FilmPage/FilmPage.scss';
 
 const FilmPage = () => {
     const { idFilm } = useParams();
@@ -25,6 +26,8 @@ const FilmPage = () => {
                 kinopoiskId: data.kinopoiskId,
             }); // press on button
         }
+
+        console.log(data, dataFrames ? dataFrames[dataFrames.length - 1].imageUrl : '');
     }, [data, dataFrames]);
 
     if (isLoading) {
@@ -34,12 +37,20 @@ const FilmPage = () => {
         return <div>This film not found.</div>; // do this with styles
     }
 
+    console.log(data);
+
     return (
         <>
-            <a href={`${FILM_PLAYER_LINK}${idFilm}`} target='_blank'>
-                here
-            </a>
-            <img src={data?.posterUrlPreview} alt='' />
+            <div className='_Container'>
+                <div className='film_body'>
+                    <div className='film_top'>
+                        <h2 className='title'>{data && data.nameRu ? data.nameRu : data && data.nameOriginal ? data.nameOriginal : ''}</h2>
+                        <img className='film_poster' src={dataFrames ? dataFrames[dataFrames.length - 1].imageUrl : ''} alt='The poster' />
+                    </div>
+
+                    <iframe src={`${FILM_PLAYER_LINK}${idFilm}`} className='player' allowFullScreen></iframe>
+                </div>
+            </div>
         </>
     );
 };
